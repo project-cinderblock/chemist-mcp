@@ -1,0 +1,57 @@
+{
+  "name": "chemist-mcp",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) server for Chemist comparative chemistry, molecular structures, and functional group manifolds platform",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "chemist-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leouofa/chemist-mcp.git"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "chemist",
+    "comparative-chemistry",
+    "chemical-classes",
+    "molecules",
+    "functional-groups",
+    "pgvector",
+    "clustering",
+    "ai-agent"
+  ],
+  "author": "Leonid Medovyy <leonid@macron1.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leouofa/chemist-mcp/issues"
+  },
+  "homepage": "https://github.com/leouofa/chemist-mcp#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "axios": "^1.21.1",
+    "dotenv": "^18.0.10",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "axios-mock-adapter": "^2.1.0",
+    "rimraf": "^6.1.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}
